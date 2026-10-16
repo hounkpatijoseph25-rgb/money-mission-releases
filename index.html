@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Money Mission — Votre argent, avec un plan</title>
+<meta name="description" content="Suivez vos dépenses, vos factures et vos objectifs d'épargne. Fonctionne hors ligne, en 9 langues et 28 devises dont le franc CFA. Vos données restent sur votre appareil.">
+<meta name="theme-color" content="#081321">
+<meta name="color-scheme" content="dark light">
+<script>/* Meme choix que l'application (meme site) : clair, sombre ou comme le telephone. */
+(function(){var t;try{t=localStorage.getItem('money-mission-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)})()</script>
+<link rel="icon" href="icons/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Money Mission — Votre argent, avec un plan">
+<meta property="og:description" content="Vos dépenses, vos factures et vos objectifs d'épargne, dans votre poche. Hors ligne, sans connexion bancaire.">
+<meta property="og:image" content="icons/icon-1024.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>:root{--bg:#081321;--card:#101f31;--line:#24364a;--text:#eff6ff;--muted:#91a6bd;--mint:#7befc3;--blue:#238eff;--mark:#16293e;--dl-a:#13263c;--dl-b:#0c1a2b;--radius:22px}:root[data-theme=light]{--lightningcss-light:initial;--lightningcss-dark: ;color-scheme:light;--bg:#f2f6fc;--card:#fff;--line:#dde5f0;--text:#0f1d3a;--muted:#56677f;--mint:#07875b;--blue:#1a6cf0;--mark:#e5efff;--dl-a:#eaf3ff;--dl-b:#f7faff}*{box-sizing:border-box}body{background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;margin:0;font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif}a{color:var(--mint)}.wrap{max-width:1060px;margin:0 auto;padding:0 16px}header{justify-content:space-between;align-items:center;gap:16px;padding:22px 0;display:flex}.brand{color:var(--text);white-space:nowrap;align-items:center;gap:11px;font-size:18px;font-weight:700;text-decoration:none;display:flex}.brand img{border-radius:9px;width:34px;height:34px;display:block}.actions{align-items:center;gap:8px;display:flex}.theme{border:1px solid var(--line);width:46px;height:46px;color:var(--text);cursor:pointer;background:0 0;border-radius:14px;place-items:center;display:grid}.theme svg{width:20px;height:20px}.btn{white-space:nowrap;border:1px solid #0000;border-radius:14px;padding:14px 24px;font-weight:700;text-decoration:none;display:inline-block}.btn-primary{background:var(--blue);color:#fff}.btn-ghost{border-color:var(--line);color:var(--text)}.btn-ghost:hover,.btn-primary:hover{filter:brightness(1.12)}.hero{padding:56px 0 24px}.hero h1{letter-spacing:-.02em;margin:0 0 18px;font-size:clamp(32px,6vw,56px);line-height:1.1}.hero .mint{color:var(--mint)}.lead{color:var(--muted);max-width:46ch;margin:0 0 30px;font-size:clamp(17px,2.4vw,21px)}.cta{flex-wrap:wrap;gap:12px;margin-bottom:18px;display:flex}.note{color:var(--muted);margin:0;font-size:14px}section{padding:44px 0}h2{letter-spacing:-.01em;margin:0 0 10px;font-size:clamp(23px,3.4vw,31px)}.sub{color:var(--muted);max-width:58ch;margin:0 0 28px}.grid{grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:16px;display:grid}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}.card h3{margin:0 0 8px;font-size:17px}.card p{color:var(--muted);margin:0;font-size:15px}.mark{background:var(--mark);width:38px;height:38px;color:var(--mint);border-radius:11px;justify-content:center;align-items:center;margin-bottom:14px;font-size:18px;display:inline-flex}.banner{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--mint);border-radius:var(--radius);padding:26px}.banner p{color:var(--muted);margin:0}.banner strong{color:var(--text)}.figures{text-align:center;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;display:grid}.figures div{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 14px}.figures b{color:var(--mint);font-size:28px;display:block}.figures span{color:var(--muted);font-size:14px}.download{background:linear-gradient(140deg, var(--dl-a), var(--dl-b));border:1px solid var(--line);border-radius:var(--radius);text-align:center;padding:40px 28px}.download .cta{justify-content:center}footer{border-top:1px solid var(--line);color:var(--muted);flex-wrap:wrap;justify-content:space-between;gap:10px 22px;padding:28px 0 44px;font-size:14px;display:flex}@media (max-width:520px){.btn{text-align:center;width:100%;display:block}.cta{gap:10px}.actions .btn{display:none}}</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <a class="brand" href="./">
+      <img src="icons/icon-192.png" alt="" width="34" height="34">
+      Money Mission
+    </a>
+    <div class="actions">
+      <button class="theme" id="theme" type="button" aria-label="Changer de thème"></button>
+      <a class="btn btn-ghost" href="app/">Ouvrir l'application</a>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Votre argent,<br><span class="mint">avec un plan.</span></h1>
+    <p class="lead">
+      Savez-vous combien vous pouvez dépenser aujourd'hui sans mettre vos factures en
+      danger ? Money Mission répond à cette question, et la met à jour à chaque dépense.
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="app/">Commencer maintenant</a>
+      <a class="btn btn-ghost" href="https://github.com/hounkpatijoseph25-rgb/money-mission-releases/releases/latest/download/money-mission.apk" download>Télécharger pour Android</a>
+    </div>
+    <p class="note">Gratuit. Sans compte obligatoire. Sans publicité.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="banner">
+      <p>
+        <strong>Vos données restent sur votre appareil.</strong>
+        Money Mission ne se connecte à aucune banque et ne demande aucun identifiant
+        bancaire. Vous saisissez ce que vous voulez suivre, c'est tout. Si vous créez
+        un compte — c'est facultatif — vos données vous suivent d'un appareil à l'autre.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ce que vous pouvez suivre</h2>
+    <p class="sub">Tout ce qu'il faut au quotidien, dans une poche.</p>
+    <div class="grid">
+      <div class="card">
+        <span class="mark" aria-hidden="true">&#9671;</span>
+        <h3>Disponible à dépenser</h3>
+        <p>Votre solde, moins les factures à venir avant la paie, moins ce que vous avez
+           mis de côté. Le chiffre qui compte vraiment.</p>
+      </div>
+      <div class="card">
+        <span class="mark" aria-hidden="true">&#9719;</span>
+        <h3>Budgets par catégorie</h3>
+        <p>Un plafond mensuel pour les courses, le transport, les loisirs. Vous voyez
+           où vous en êtes avant de dépasser.</p>
+      </div>
+      <div class="card">
+        <span class="mark" aria-hidden="true">&#9873;</span>
+        <h3>Objectifs d'épargne</h3>
+        <p>Un fonds d'urgence, un voyage, une rentrée scolaire. Chaque versement
+           rapproche du but.</p>
+      </div>
+      <div class="card">
+        <span class="mark" aria-hidden="true">&#9636;</span>
+        <h3>Factures et échéances</h3>
+        <p>Loyer, assurance, scolarité. Réservés avant la paie, pour ne jamais être
+           pris de court.</p>
+      </div>
+      <div class="card">
+        <span class="mark" aria-hidden="true">&#8646;</span>
+        <h3>Détecteur d'abonnements</h3>
+        <p>Importez un relevé et l'application repère les prélèvements qui reviennent —
+           y compris ceux que vous aviez oubliés.</p>
+      </div>
+      <div class="card">
+        <span class="mark" aria-hidden="true">&#9635;</span>
+        <h3>Scan de reçus</h3>
+        <p>Photographiez un ticket : le montant est lu sur l'appareil, sans qu'aucune
+           image ne parte ailleurs.</p>
+      </div>
+      <div class="card">
+        <span class="mark" aria-hidden="true">&#9638;</span>
+        <h3>Calendrier automatique</h3>
+        <p>Factures, abonnements et prélèvements repérés dans vos relevés : toutes les
+           échéances du mois au même endroit, sans rien saisir deux fois.</p>
+      </div>
+      <div class="card">
+        <span class="mark" aria-hidden="true">&#9673;</span>
+        <h3>Rappels et alertes</h3>
+        <p>Sur Android, une notification avant chaque échéance, et une alerte quand un
+           budget approche de son plafond.</p>
+      </div>
+      <div class="card">
+        <span class="mark" aria-hidden="true">&#8594;</span>
+        <h3>Démarrage guidé</h3>
+        <p>Au premier lancement, quelques questions — revenus, comptes, factures,
+           objectif — et votre budget est prêt. En clair ou en sombre.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Fait pour être utilisé partout</h2>
+    <p class="sub">Y compris là où la connexion est rare et chère.</p>
+    <div class="figures">
+      <div><b>9</b><span>langues</span></div>
+      <div><b>28</b><span>devises, franc CFA compris</span></div>
+      <div><b>0</b><span>connexion bancaire</span></div>
+      <div><b>100 %</b><span>utilisable hors ligne</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Trois façons de l'utiliser</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Dans le navigateur</h3>
+        <p>Rien à installer. Ouvrez l'application et commencez — elle fonctionne
+           déjà hors ligne.</p>
+      </div>
+      <div class="card">
+        <h3>Installée sur l'écran d'accueil</h3>
+        <p>Depuis le navigateur, choisissez « Installer l'application ». Elle prend
+           son icône et s'ouvre en plein écran.</p>
+      </div>
+      <div class="card">
+        <h3>Application Android</h3>
+        <p>Un fichier à installer, puis tout reste sur le téléphone. Idéal si vous
+           préférez une vraie application.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="download">
+      <h2>Commencez aujourd'hui</h2>
+      <p class="sub" style="margin-inline:auto">
+        Un petit pas aujourd'hui. Un avenir plus serein.
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="app/">Ouvrir l'application</a>
+        <a class="btn btn-ghost" href="https://github.com/hounkpatijoseph25-rgb/money-mission-releases/releases/latest/download/money-mission.apk" download>Télécharger l'APK</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Money Mission — Votre prochain pas commence ici.</span>
+    <span><a href="app/">Application</a></span>
+  </footer>
+</div>
+
+<script>
+  // Bascule clair / sombre. Le choix est partage avec l'application (meme site).
+  (function () {
+    var bouton = document.getElementById('theme');
+    var soleil = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>';
+    var lune = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20 14.6A8.3 8.3 0 0 1 9.4 4a8.3 8.3 0 1 0 10.6 10.6Z"/></svg>';
+    function afficher() {
+      var sombre = document.documentElement.getAttribute('data-theme') === 'dark';
+      bouton.innerHTML = sombre ? soleil : lune;
+      bouton.setAttribute('aria-label', sombre ? 'Thème clair' : 'Thème sombre');
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', sombre ? '#081321' : '#f2f6fc');
+    }
+    bouton.addEventListener('click', function () {
+      var t = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+      try { localStorage.setItem('money-mission-theme', t); } catch (e) {}
+      afficher();
+    });
+    if (window.matchMedia) matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+      var choix = null;
+      try { choix = localStorage.getItem('money-mission-theme'); } catch (err) {}
+      if (choix === 'light' || choix === 'dark') return;
+      document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+      afficher();
+    });
+    afficher();
+  })();
+</script>
+</body>
+</html>
