@@ -1,6 +1,6 @@
 {
-  "name": "Money Mission",
-  "short_name": "Money Mission",
+  "name": "SteadyPath",
+  "short_name": "SteadyPath",
   "description": "Vos comptes, vos budgets et vos objectifs, dans votre poche. Fonctionne hors ligne.",
   "id": "/",
   "start_url": "./",

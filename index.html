@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Money Mission — Votre argent, avec un plan</title>
-<meta name="description" content="Suivez vos dépenses, vos factures et vos objectifs d'épargne. Fonctionne hors ligne, en 9 langues et 28 devises dont le franc CFA. Vos données restent sur votre appareil.">
+<title>SteadyPath — Votre argent, avec un plan</title>
+<meta name="description" content="Suivez vos dépenses, vos factures et vos objectifs d'épargne. Mode invité local, ou compte facultatif pour synchroniser vos données entre appareils.">
 <meta name="theme-color" content="#081321">
 <meta name="color-scheme" content="dark light">
 <script>/* Meme choix que l'application (meme site) : clair, sombre ou comme le telephone. */
@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Money Mission — Votre argent, avec un plan">
+<meta property="og:title" content="SteadyPath — Votre argent, avec un plan">
 <meta property="og:description" content="Vos dépenses, vos factures et vos objectifs d'épargne, dans votre poche. Hors ligne, sans connexion bancaire.">
 <meta property="og:image" content="icons/icon-1024.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -26,7 +26,7 @@
   <header>
     <a class="brand" href="./">
       <img src="icons/icon-192.png" alt="" width="34" height="34">
-      Money Mission
+      SteadyPath
     </a>
     <div class="actions">
       <button class="theme" id="theme" type="button" aria-label="Changer de thème"></button>
@@ -38,11 +38,11 @@
     <h1>Votre argent,<br><span class="mint">avec un plan.</span></h1>
     <p class="lead">
       Savez-vous combien vous pouvez dépenser aujourd'hui sans mettre vos factures en
-      danger ? Money Mission répond à cette question, et la met à jour à chaque dépense.
+      danger ? SteadyPath répond à cette question, et la met à jour à chaque dépense.
     </p>
-    <div class="cta">
+    <div class="cta"><a class="btn btn-primary" href="app/?signin=1">Sign in / Create account</a>
       <a class="btn btn-primary" href="app/">Commencer maintenant</a>
-      <a class="btn btn-ghost" href="https://github.com/hounkpatijoseph25-rgb/money-mission-releases/releases/latest/download/money-mission.apk" download>Télécharger pour Android</a>
+      <a class="btn btn-ghost" href="https://github.com/peterzossou-coder/money-mission-releases/releases/latest/download/money-mission.apk" download>Télécharger pour Android</a>
     </div>
     <p class="note">Gratuit. Sans compte obligatoire. Sans publicité.</p>
   </div>
@@ -52,10 +52,12 @@
   <section>
     <div class="banner">
       <p>
-        <strong>Vos données restent sur votre appareil.</strong>
-        Money Mission ne se connecte à aucune banque et ne demande aucun identifiant
+        <strong>Mode invité local, ou synchronisation avec un compte.</strong>
+        SteadyPath ne se connecte à aucune banque et ne demande aucun identifiant
         bancaire. Vous saisissez ce que vous voulez suivre, c'est tout. Si vous créez
-        un compte — c'est facultatif — vos données vous suivent d'un appareil à l'autre.
+        un compte — c'est facultatif — les données de ce compte sont enregistrées dans
+        Supabase et synchronisées entre vos appareils. Une copie locale permet le travail
+        hors ligne. Sur un appareil partagé, évitez d'enregistrer des données sensibles.
       </p>
     </div>
   </section>
@@ -97,8 +99,8 @@
       <div class="card">
         <span class="mark" aria-hidden="true">&#9635;</span>
         <h3>Scan de reçus</h3>
-        <p>Photographiez un ticket : le montant est lu sur l'appareil, sans qu'aucune
-           image ne parte ailleurs.</p>
+        <p>Photographiez un ticket : la lecture du montant se fait sur l'appareil.
+           Les données enregistrées dans un compte sont synchronisées.</p>
       </div>
       <div class="card">
         <span class="mark" aria-hidden="true">&#9638;</span>
@@ -147,8 +149,8 @@
       </div>
       <div class="card">
         <h3>Application Android</h3>
-        <p>Un fichier à installer, puis tout reste sur le téléphone. Idéal si vous
-           préférez une vraie application.</p>
+        <p>L'APK existant fonctionne sur le téléphone. Les nouveaux comptes et la
+           synchronisation sont disponibles dans la version web ci-dessus.</p>
       </div>
     </div>
   </section>
@@ -161,13 +163,13 @@
       </p>
       <div class="cta">
         <a class="btn btn-primary" href="app/">Ouvrir l'application</a>
-        <a class="btn btn-ghost" href="https://github.com/hounkpatijoseph25-rgb/money-mission-releases/releases/latest/download/money-mission.apk" download>Télécharger l'APK</a>
+        <a class="btn btn-ghost" href="https://github.com/peterzossou-coder/money-mission-releases/releases/latest/download/money-mission.apk" download>Télécharger l'APK</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <span>Money Mission — Votre prochain pas commence ici.</span>
+    <span>SteadyPath — Votre prochain pas commence ici.</span>
     <span><a href="app/">Application</a></span>
   </footer>
 </div>

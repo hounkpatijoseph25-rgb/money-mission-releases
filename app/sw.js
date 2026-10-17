@@ -1,10 +1,10 @@
 /* Genere par tools/sync-legacy.mjs. Ne pas modifier a la main. */
-const VERSION = "86ce9736399f";
+const VERSION = "steadypath-accounts-20261017-v1";
 const CACHE = 'money-mission-' + VERSION;
 // Coquille de l'application. Le moteur OCR (vendor/ocr, 14 Mo) en est volontairement exclu :
 // il n'est mis en cache qu'a la premiere utilisation du scan de recus.
 const SHELL = ['./', 'index.html', 'legacy.js', 'style.css', 'manifest.webmanifest',
-  'icons/icon-192.png', 'icons/icon-512.png'];
+  'icons/icon-192.png', 'icons/icon-512.png', 'account.css', 'assets/steadypath.js', 'assets/index-DEN-giK1.css'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
